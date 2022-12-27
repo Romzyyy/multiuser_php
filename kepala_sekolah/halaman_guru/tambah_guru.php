@@ -53,13 +53,26 @@ include "../../koneksi.php";
 if(isset($_POST['proses'])){
     $dir = "files/";
     $file_name = $_FILES['NamaFile']['name'];
-    move_uploaded_file($_FILES['NamaFile']['tmp_name'], $dir.$file_name);
+    $ext = ['png'];
+    $ext_file = explode('.', $file_name);
+    $ext_file = strtolower(end($ext_file));
+    if(!in_array($ext_file, $ext)){
+  echo "<div class='d-flex justify-content-center'>
+            <p class='text-center'>Hanya bisa upload png</p>
+        </div>
+        ";
+    }else{
+    $file = uniqid();
+    $file .= '.';
+    $file .= $ext_file;
+    move_uploaded_file($_FILES['NamaFile']['tmp_name'], $dir.$file);
     mysqli_query($koneksi, "INSERT INTO guru set 
     nip = '$_POST[nip]',
     nama = '$_POST[nama]',
     alamat = '$_POST[alamat]',
-    file = '$file_name'") or die (mysqli_error($koneksi));
+    file = '$file'") or die(mysqli_error($koneksi));
     header("location:guru.php");
+}
 }
 
 ?>
