@@ -1,7 +1,7 @@
 <?php 
 	session_start();
  
-	if($_SESSION['level']!=="kepala_sekolah"){
+	if($_SESSION['level']!=="guru"){
 		header("location:index.php?pesan=gagal");
 	}
  

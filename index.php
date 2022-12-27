@@ -1,3 +1,17 @@
+<?php 
+	session_start();
+	if (isset($_SESSION['username'])) {
+        if($_SESSION['level'] == "siswa") {
+          header('Location: siswa/halaman_siswa.php');
+        } else if($_SESSION['level'] == "guru") {
+          header('Location: guru/halaman_siswa/siswa.php');
+        } else if($_SESSION['level'] == "kepala_sekolah") {
+          header('Location: kepala_sekolah/halaman_guru/guru.php');
+        }
+        exit;
+      }
+ 
+	?>
 <!doctype html>
 <html lang="en">
 
