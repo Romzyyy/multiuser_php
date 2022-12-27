@@ -21,7 +21,7 @@ if($cek > 0){
 		$_SESSION['level'] = "kepala_sekolah";
 		header("location:kepala_sekolah/halaman_guru/guru.php");
 	}else{
-		header("location:index.php?pesan=gagal");
+	header("location:index.php?pesan=gagal");
 	}	
 }else{
 	header("location:index.php?pesan=gagal");
