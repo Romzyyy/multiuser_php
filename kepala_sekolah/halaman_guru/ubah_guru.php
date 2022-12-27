@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if($_SESSION['level']!=="guru"){
+    header("location:index.php?pesan=gagal");
+}
+
 include "../../koneksi.php";
 $sql = mysqli_query($koneksi, "select * from guru where id='$_GET[kode]'");
 $data = mysqli_fetch_array($sql);

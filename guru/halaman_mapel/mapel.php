@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+ 
+	if($_SESSION['level']!=="kepala_sekolah"){
+		header("location:index.php?pesan=gagal");
+	}
+ 
+	?>
 <!doctype html>
 <html lang="en">
 

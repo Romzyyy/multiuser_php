@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if($_SESSION['level']!=="kepala_sekolah"){
+    header("location:index.php?pesan=gagal");
+}
+
 include "../../koneksi.php";
 $sql = mysqli_query($koneksi, "select * from matapelajaran where id='$_GET[kode]'");
 $data = mysqli_fetch_array($sql);
