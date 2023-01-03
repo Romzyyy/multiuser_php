@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container w-50">
+        <div class="container">
             <a class="navbar-brand" href="#">KURSUS/guru</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,22 +40,23 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid mt-5">
+    <div class="mt-5">
         <h1 class="text-center mt-5 mb-5">Data Siswa</h1>
-        <div class="container-fluid w-75 position-relative">
+        <div class="container position-relative">
             <a class="btn btn-success" href="tambah_siswa.php" role="button">Add New</a>
-            <table class="table position-absolute top-0 start-50 translate-middle-x mt-5 text-center">
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Kelas</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Foto</th>
-                        <th scope="col text-center">Action</th>
-                    </tr>
-                </thead>
-                <?php
+            <div class="table-responsive">
+                <table class="table mt-5 text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Kelas</th>
+                            <th scope="col">Alamat</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <?php
             include "../../koneksi.php";
             $no = 1;
             $data = mysqli_query($koneksi, "select * from siswa")or die (mysqli_error($koneksi));
@@ -76,7 +77,9 @@
           $no++;
             }
             ?>
-            </table>
+                </table>
+            </div>
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

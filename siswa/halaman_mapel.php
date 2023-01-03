@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container w-50">
+        <div class="container">
             <a class="navbar-brand" href="#">KURSUS/siswa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +40,9 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid mt-5">
+    <div class=" mt-5">
         <h1 class="text-center mt-5 mb-5">MATAPELAJARAN</h1>
-        <div class="container-fluid w-75 position-relative">
+        <div class="container position-relative">
             <table class="table position-absolute top-0 start-50 translate-middle-x mt-5 text-center">
                 <thead>
                     <tr>

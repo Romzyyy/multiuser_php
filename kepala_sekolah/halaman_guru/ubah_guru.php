@@ -23,7 +23,7 @@ $data = mysqli_fetch_array($sql);
 </head>
 
 <body>
-    <div class="container-fluid w-25 mt-5">
+    <div class="container mt-5">
         <h1 class="text-center mt-5 mb-5">Ubah Data Guru</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">

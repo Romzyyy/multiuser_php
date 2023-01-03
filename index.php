@@ -36,18 +36,20 @@
             </div>
         </div>
     </nav>
-    <div class="card text-light">
-        <img src="assets/gambar.jpeg" class="card-img align-middle" alt="..." style="height: 500px;">
+    <div class="card text-light ">
+        <div class="col-md-6 mt-5 pt-2 col-lg-12">
+            <img src="assets/gambar.jpeg" class="card-img img-fluid align-middle img-thumbnail" alt="...">
+        </div>
         <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column">
-            <h2 class="card-title fs-1">MADRASAH IBTIDAIYAH</h2>
-            <h1 class="card-title fs-1">MIFTAHUL HUDA</h1>
-            <h3 class="card-title fs-1">Gedang-gedang Batuputih</h3>
+            <h2 class="card-title fs-1 col-md-6 pt-5 col-lg-12 text-center">MADRASAH IBTIDAIYAH</h2>
+            <h1 class="card-title fs-1 ">MIFTAHUL HUDA</h1>
+            <h3 class="card-title fs-1 ">Gedang-gedang Batuputih</h3>
         </div>
     </div>
     </div>
-    <div class="container-fluid mt-5" id="siswa">
+    <div class="mt-5" id="siswa">
         <h1 class="text-center mt-5 mb-5 font-monospace">Data Siswa</h1>
-        <div class="container w-75">
+        <div class="container">
             <table class="table mt-5 text-center">
                 <thead>
                     <tr>
@@ -78,9 +80,9 @@
             </table>
         </div>
     </div>
-    <div class="container-fluid mt-5" id="guru">
+    <div class="mt-5" id="guru">
         <h1 class="text-center mt-5 mb-5 font-monospace">Data guru</h1>
-        <div class="container w-75">
+        <div class="container">
             <table class="table mt-5 text-center">
                 <thead>
                     <tr>
